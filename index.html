@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+
+
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="plan.html">Plan</a>
+        <a href="policy.html">Policy</a>
+        <a id="show-register" href="#">Sign up</a>
+        <a id="show-login" href="#">Login</a>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="container">
+        <div class="notification">
+            <div class="weather-container">
+                <div class="weather-icon">
+                    <img src="icons/unknown.png" alt="">
+                </div><br><br><br><br>
+                <div class="temperature-value">
+                    <p>24 C °<span>C</span></p>
+                </div>
+                <div class="temperature-description">
+                    <p>temperature-description</p>
+                </div>
+                <div class="location">
+                    <p>location</p>
+                </div>
+                <div class="time">
+                    <p>date & time</p>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="booking">
+            <label>
+                from
+                <div class="from">
+
+                    <select>
+                        <option value="0">departure:</option>
+                        <option value="1">Katowice</option>
+                    </select>
+
+                </div>
+                <label>
+                    to
+                    <div class="to">
+                        <select>
+                            <option value="0">arrival:</option>
+                            <option value="1">Warszawa</option>
+                            <option value="2">Paryż</option>
+                            <option value="3"> Nowy Jork</option>
+                        </select>
+                    </div>
+                    <label>
+                        outbound<br>
+                        <input id="datefieldOut" type="date" [min]="minDate"><br>
+                    </label>
+
+                    <label>
+                        return<br>
+                        <input id="datefieldRet" type="date" [min]="minDate"><br>
+                    </label><br>
+                    <div class="btn">
+                        <a href="seat.html">book</a>
+                    </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    </div>
+
+
+    <!---login popup-->
+    <div class="popup">
+        <div class="close-btn">&times;</div>
+        <div class="form">
+            <h2>log in</h2>
+            <div class="form-element">
+                <label for="email">email</label>
+                <input type="text" id="email" placeholder="enter email">
+            </div>
+            <div class="form-element">
+                <label for="password">password</label>
+                <input type="password" id="password" placeholder="enter password">
+            </div>
+            <div class="form-element">
+                <button>sign in</button>
+            </div>
+            <div class="form-element">
+                <a href="#">forgot password</a>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+    <div class="gallery">
+        <div class="i">
+            <img src="beaches.jpeg">
+        </div>
+        <div class="i">
+            <img src="ny.jpg">
+        </div>
+        <div class="i">
+            <img src="par.jpg">
+        </div>
+        <div class="i">
+            <img src="waw.jpg">
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <div class="footer">
+        <h2>airlines</h2>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

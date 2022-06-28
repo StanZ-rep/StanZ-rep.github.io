@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+
+  text-align: center;
+  background: rgb(2, 5, 50);
+  color: white;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: rgb(2, 5, 50);
+
+  text-align: center;
+}
+
+.container {
+  box-sizing: border-box;
+  background-image: ;
+  display: flex;
+  flex-wrap: wrap;
+
+  height: 60%;
+  width: 100%;
+  max-height: 1000px;
+}
+
+.notification {
+  max-width: 200px;
+  flex: 25%;
+  background-color: rgba(65, 90, 141, 0.466);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 15px;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: rgb(2, 5, 50);
+  color: azure;
+
+}
+
+.booking {
+  flex: 75%;
+  left: 25%;
+  padding: 15px;
+  margin: 20px;
+  max-width: 800px;
+  max-hight: 800px;
+  height: 100%;
+  float: right;
+
+  background-color: rgba(65, 90, 141, 0.466);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  width: 75%;
+
+
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(202, 184, 184, 0.2), 0 6px 20px 0 rgba(191, 179, 179, 0.19);
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side-left {
+  flex: 20%;
+  background-color: white;
+  padding: 20px;
+}
+
+.side-right {
+  flex: 20%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Main column */
+.container {
+  display: grid;
+  height: 400px;
+  align-content: center;
+  width: 100%;
+  flex: 100%;
+  height: 50%;
+  background-color: white;
+  padding: 60px;
+  background-image: url(Water_beach_sand_shore_1920x1200.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+
+.gallery {
+  display: flex;
+
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgb(2, 5, 50);
+
+
+}
+
+
+img {
+
+
+
+  object-position: bottom;
+
+  text-align: center;
+  padding: 15px;
+}
+
+
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  background-color: rgb(19, 77, 118);
+  color: white;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media only screen and (max-width: 992px) {
+
+  .container,
+  .fakeimg,
+  .row,
+  .navbar {
+    flex-direction: column;
+  }
+}
+
+.row {
+  flex: 50%;
+}
+
+.container {
+  flex: 70%;
+
+}
+
+.form-container {
+  position: inherit;
+  right: 0;
+  margin: 20px;
+  max-width: 300px;
+  padding: 16px;
+
+}
+
+.weather-icon {
+  max-width: 15%;
+  max-width: 50px !important;
+  max-height: 50px !important;
+}
+
+.i:hover {
+  background-color: yellow;
+}
+
+/*popup styling */
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.25);
+  width: 380px;
+  padding: 20px 30px;
+  background: rgb(2, 5, 50);
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  transition: top 0ms ease-in-out 200ms,
+    opacity 200ms ease-in-out 0ms,
+    transform 200ms ease-in-out 0ms;
+}
+
+.popup.active {
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms,
+    opacity 200ms ease-in-out 0ms,
+    transform 200ms ease-in-out 0ms;
+
+
+}
+
+.popup .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  background: rgb(14, 14, 174);
+  color: aqua;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.popup .form h2 {
+  text-align: center;
+  color: azure;
+  margin: 10px 0px 20px;
+  font-size: 25px;
+}
+
+.popup .form .form-element {
+  margin: 15px 0px;
+}
+
+.popup .form .form-element label {
+  font-size: 14px;
+  color: azure;
+}
+
+.popup .form .form-element input[type="text"],
+.popup .form .form-element input[type="password"] {
+  margin-top: 5px;
+  display: block;
+  width: 95%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid rgb(60, 55, 55);
+  border-radius: 5px;
+}
+
+.popup .form .form-element button {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  background: rgb(66, 91, 233);
+  color: azure;
+  border-radius: 5px;
+  border: 1px solid rgb(60, 55, 55);
+
+}
